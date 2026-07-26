@@ -6,7 +6,7 @@ public:
             return 0;
         sort(nums.begin(), nums.end());
         int n = nums.size();
-        int lastsmaller = -2;
+        int lastsmaller = INT_MIN;
         int cnt =0;
         int largest =1;
         for(int i =0;i<n; i++){
