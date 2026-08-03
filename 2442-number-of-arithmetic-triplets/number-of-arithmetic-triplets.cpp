@@ -1,14 +1,14 @@
-class Solution {
+ class Solution {
 public:
-  int arithmeticTriplets(vector<int>& nums, int diff) {
-        int cnt = 0;
-        unordered_set<int> S(nums.begin(), nums.end());
-        
-        for(int i=0;i<nums.size();i++){
-            if(S.count(nums[i]-diff) && S.count(nums[i]+diff)) {
-                cnt++;
-            }
+    int arithmeticTriplets(vector<int>& nums, int diff) {
+       unordered_set<int>st(nums.begin(),nums.end());
+       int count=0;
+
+       for(int num:nums){
+        if(st.count(num+diff) && st.count(num+2*diff)){
+            count++;
         }
-        return cnt;
+       } 
+       return count;
     }
 };
